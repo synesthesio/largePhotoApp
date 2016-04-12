@@ -16,6 +16,6 @@ typedef NS_ENUM(NSInteger, StubResponseType) {
 		TriviaDictionary,
 };
 + (OHHTTPStubsResponse *)stubResponseWithType:(StubResponseType)type;
-+(NSArray *)createFakeJSONDictionary;
+
 
 @end

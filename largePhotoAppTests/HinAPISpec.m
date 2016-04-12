@@ -50,26 +50,28 @@ describe(@"HinAPI", ^{
 								 });
 								 
 								 it(@"should make GET request and return array of JSON Dictionary objects", ^{
+	
+										 
+								 
+										
 										 
 										 HinAPI *test = [[HinAPI alloc] init];
 										 [test loadImageInformationWithCompletion:^{
 										 
+										 
 												NSArray *stuff =  [DataStore sharedDataStore].arrayForImagesInCD;
-												 NSLog(@"The stuff that is printing is : %@", stuff);
+												 
+												 NSDictionary *firstObject = stuff[0];
+												 NSString *imageURL = firstObject[@"imageURL"];
+												 NSString *imageDescription = firstObject[@"imageDescription"];
+												 
+												 
 												 
 												 expect(stuff).to.beAKindOf([NSArray class]);
-
-//
-												 
+												 expect(stuff.count).to.equal([DataStore sharedDataStore].arrayForImagesInCD.count);
+												 expect(imageDescription).to.equal(@"Golden Toad");
+												 expect(imageURL).to.equal(@"http://pop.h-cdn.co/assets/15/31/980x775/gallery-1438368282-golden-toad.jpg");
 										 }];
-										 
-										 
-										 
-												 //
-												 //										 HinAPI *HinAPIForTest = [[HinAPI alloc]init];
-												 //								 [HinAPIForTest loadImageInformationWithCompletion:^{
-												 //
-												 //								 }];
 										 
 										 
 								 });
