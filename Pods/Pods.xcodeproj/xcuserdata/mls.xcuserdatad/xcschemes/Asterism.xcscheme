@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C650792F26F4F89DC615EDF'
+               BlueprintIdentifier = '53AA2501432CE06D5DDC1E31'
                BlueprintName = 'Asterism'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libAsterism.a'>

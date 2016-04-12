@@ -9,7 +9,7 @@ end
 
 target 'largePhotoAppTests' do
 
-pod 'Specta',      '~> 0.2.1'
+pod 'Specta', '~> 1.0'
 pod 'Expecta',     '~> 0.2.4'
 pod 'OHHTTPStubs'
   pod 'Asterism'
