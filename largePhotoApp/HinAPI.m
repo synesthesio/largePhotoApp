@@ -35,6 +35,7 @@ NSString *const API_URL = @"https://hinge-homework.s3.amazonaws.com/client/servi
 								});
 				}
 				dispatch_async(dispatch_get_main_queue(), ^{
+						NSLog(@"Completion block gettting called!!!!!!!!!!!!!!!!!");
 						completionBlock();
 				});
 		}];

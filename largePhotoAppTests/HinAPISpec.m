@@ -14,6 +14,7 @@
 #import "Expecta.h"
 #import <Asterism.h>
 #import "TestHelper.h"
+#import "ImageData.h"
 
 
 
@@ -32,10 +33,6 @@ describe(@"HinAPI", ^{
 								 
 								 beforeEach(^{
 								 
-
-										 
-										
-								 
 										 [OHHTTPStubs removeAllStubs];
 										 httpStub = [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest * _Nonnull request) {
 												 
@@ -47,65 +44,40 @@ describe(@"HinAPI", ^{
 												 
 										 }];
 										 
-										 
 								 });
 								 
 								 it(@"should make GET request and return array of JSON Dictionary objects", ^{
 	
+										 HinAPI *test = [[HinAPI alloc] init];
+
 										 waitUntil(^(DoneCallback done) {
 										 
-												 HinAPI *test = [[HinAPI alloc] init];
 												 [test loadImageInformationWithCompletion:^{
-														 
 														 
 														 NSArray *stuff =  [DataStore sharedDataStore].arrayForImagesInCD;
 														 
-														 NSDictionary *firstObject = stuff[0];
-														 NSString *imageURL = firstObject[@"imageURL"];
-														 NSString *imageDescription = firstObject[@"imageDescription"];
-														 
-														 
-														 
+														 ImageData *data = stuff[0];
+														 NSString *name = data.name;
+														 NSString *imageURL = data.imageURL;
+														 NSString *desc = data.desc;
+														
 														 expect(stuff).to.beAKindOf([NSArray class]);
 														 expect(stuff.count).to.equal([DataStore sharedDataStore].arrayForImagesInCD.count);
-														 expect(imageDescription).to.equal(@"Golden Toad");
+														 expect(desc).to.equal(@"Golden Toad");
 														 expect(imageURL).to.equal(@"http://pop.h-cdn.co/assets/15/31/980x775/gallery-1438368282-golden-toad.jpg");
+														 done();
+
 												 }];
+												 
+
+
 										 
-										 done();
 										 });
 								 
-										
-										 
-										 
-										 
-										 
 								 });
-								 
 								 
 						 });
 		
-		
-		
-//		beforeAll(^{
-//				
-//		});
-//		
-//		beforeEach(^{
-//				
-//		});
-//		
-//		it(@"", ^{
-//				
-//		});
-//		
-//		afterEach(^{
-//				
-//		});
-//		
-//		afterAll(^{
-//				
-//		});
 });
 
 SpecEnd
