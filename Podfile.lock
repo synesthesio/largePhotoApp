@@ -1,0 +1,31 @@
+PODS:
+  - Asterism (1.0.0)
+  - Expecta (0.2.4)
+  - OHHTTPStubs (5.0.0):
+    - OHHTTPStubs/Default (= 5.0.0)
+  - OHHTTPStubs/Core (5.0.0)
+  - OHHTTPStubs/Default (5.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.0.0)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - Asterism
+  - Expecta (~> 0.2.4)
+  - OHHTTPStubs
+  - Specta (~> 0.2.1)
+
+SPEC CHECKSUMS:
+  Asterism: b2992aaf4ac2dbc66c3aea3a6412c67e3e689835
+  Expecta: cfaf1d3e2e194ca704a25e997093d30a1ce70b61
+  OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
+  Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nLI-lw-Kbe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Images Table View Controller-->
+        <scene sceneID="NRg-xC-Ueb">
+            <objects>
+                <tableViewController id="nLI-lw-Kbe" customClass="ImagesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="377" sectionHeaderHeight="28" sectionFooterHeight="28" id="h64-Y1-sv7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" rowHeight="377" id="fWd-eg-UoW" customClass="ImageTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="320" height="377"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fWd-eg-UoW" id="exK-qU-4Q0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="376"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EYo-Tf-kRU">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="376"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="EYo-Tf-kRU" secondAttribute="trailing" id="HnE-Lu-BZK"/>
+                                        <constraint firstItem="EYo-Tf-kRU" firstAttribute="top" secondItem="exK-qU-4Q0" secondAttribute="top" id="HuW-Xp-ZIl"/>
+                                        <constraint firstItem="EYo-Tf-kRU" firstAttribute="leading" secondItem="exK-qU-4Q0" secondAttribute="leading" id="kS2-Ra-wcF"/>
+                                        <constraint firstAttribute="bottom" secondItem="EYo-Tf-kRU" secondAttribute="bottom" id="wg0-pa-jd3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageViewForCell" destination="EYo-Tf-kRU" id="OTb-1A-f87"/>
+                                    <segue destination="i46-R4-8P3" kind="modal" id="QRM-4e-t29"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nLI-lw-Kbe" id="m9W-78-IEd"/>
+                            <outlet property="delegate" destination="nLI-lw-Kbe" id="F0Y-tK-16Y"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Jki-Qc-Ksd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJ1-75-Pv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="321"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="2l7-9u-5d3">
+            <objects>
+                <viewController id="ke1-EG-39B" customClass="GalleryViewController" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="L4S-Ud-Ji8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <navigationItem key="navigationItem" id="6CF-bm-bko">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="CW2-Kh-bO1">
+                            <connections>
+                                <segue destination="nLI-lw-Kbe" kind="modal" id="bKM-GD-asy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="L4S-Ud-Ji8" id="w61-IK-hHQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0GD-7p-8GP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="255"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yCY-F9-Jrb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i46-R4-8P3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Lbi-3g-c79"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eW6-sS-CFi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ke1-EG-39B" kind="relationship" relationship="rootViewController" id="Nax-Mm-cP0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAI-Z5-cRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="321"/>
+        </scene>
+    </scenes>
+</document>

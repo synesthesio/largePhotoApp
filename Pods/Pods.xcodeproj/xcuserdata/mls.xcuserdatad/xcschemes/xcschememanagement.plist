@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Asterism.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-largePhotoAppTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Specta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>045D3251CE3EFD09123EE341B544522A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>316BE9220C5264ADA6D562CE33595A37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3361148435775DCBD6F85A2BF47E3060</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3A13224B5DC19AEFADC4C94DB5C8D60C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D08FA813FA5EDC4716DC1775DDF98C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

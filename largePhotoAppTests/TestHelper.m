@@ -1,0 +1,122 @@
+//
+//  TestHelper.m
+//  largePhotoApp
+//
+//  Created by synesthesia on 4/12/16.
+//  Copyright © 2016 synesthesia. All rights reserved.
+//
+
+#import "TestHelper.h"
+
+@interface TestHelper()
++ (NSArray *)createFakeArrayJSON;
+
+
+@end
+
+@implementation TestHelper
+
++ (OHHTTPStubsResponse *)stubResponseWithType:(StubResponseType)type {
+
+ NSString *fakeArrayJSON = [[NSBundle mainBundle] pathForResource:@"FakeFinalArrayJSON" ofType:@"json"];
+		
+		switch (type) {
+						
+				case Array: {
+						
+						
+						return [OHHTTPStubsResponse responseWithFileAtPath:fakeArrayJSON
+																										statusCode:200
+																											 headers:@{ @"Content-type": @"application/json"}];
+						break;
+				}
+				default:
+						
+						return nil;
+						break;
+		}
+}
+//+(NSArray *)createFakeJSONDictionary{
+//		
+//		
+//		NSArray *fakeDictArray = @[
+//																														   @{
+//																																	 @"imageDescription" : @"Golden Toad",
+//																																	 @"imageName" : @"Toad",
+//																																	 @"imageURL" : @"http://pop.h-cdn.co/assets/15/31/980x775/gallery-1438368282-golden-toad.jpg"
+//																																	 },
+//																															 @{
+//																																	 @"imageDescription" : @"Zanzibar Leopard",
+//																																	 @"imageName" : @"Leopard",
+//																																	 @"imageURL" : @"http://pop.h-cdn.co/assets/cm/15/05/54ca698969ab3_-_zanzibarleopard-lg.jpg"
+//																																	 },
+//																															 @{
+//																																	 @"imageDescription" : @"",
+//																																	 @"imageName" : @"Poouli",
+//																																	 @"imageURL" : @"http://pop.h-cdn.co/assets/cm/15/05/54ca6989e0712_-_poo-uli-black-faced-honey-lg.jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Great White",
+//																																	 @"imageName" : @"Madeiran",
+//																																	 @"imageURL" : @"http://pop.h-cdn.co/assets/cm/15/05/54ca698a4d249_-_pieris_wollastoni-pd-lg.jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Nature panorama",
+//																																	 @"imageName" : @"Panorama",
+//																																	 @"imageURL" : @"http://upload.wikimedia.org/wikipedia/commons/8/81/Carn_Eige_Scotland_-_Full_Panorama_from_Summit.jpeg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Hubble space telescope",
+//																																	 @"imageName" : @"Hubble",
+//																																	 @"imageURL" : @"http://upload.wikimedia.org/wikipedia/commons/1/1c/NGC_6302_Hubble_2009.full.jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Hubble space telescope",
+//																																	 @"imageName" : @"Hubble 2",
+//																																	 @"imageURL" : @"http://upload.wikimedia.org/wikipedia/commons/3/3c/Merging_galaxies_NGC_4676_(captured_by_the_Hubble_Space_Telescope).jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"NASA Shuttle",
+//																																	 @"imageName" : @"Shuttle",
+//																																	 @"imageURL" : @"http://spaceflight.nasa.gov/gallery/images/shuttle/sts-125/hires/s125e012033.jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"",
+//																																	 @"imageName" : @"Flower",
+//																																	 @"imageURL" : @"http://mayang.com/textures/Plants/images/Flowers/large_flower_6080110.JPG"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Tiny head png",
+//																																	 @"imageName" : @"Head",
+//																																	 @"imageURL" : @"http://setiathome.berkeley.edu/img/head_20.png"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Start forming region",
+//																																	 @"imageName" : @"Stars",
+//																																	 @"imageURL" : @"http://upload.wikimedia.org/wikipedia/commons/c/ca/Star-forming_region_S106_(captured_by_the_Hubble_Space_Telescope).jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"",
+//																																	 @"imageName" : @"",
+//																																	 @"imageURL" : @"http://hdwallpaper.freehdw.com/0003/nature-landscapes_widewallpaper_large-flowers-close-up_21096.jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Neobirding",
+//																																	 @"imageName" : @"Eagle",
+//																																	 @"imageURL" : @"http://media.cleveland.com/neobirding_impact/photo/11460704-large.jpg"
+//																															 },
+//																															 @{
+//																																	 @"imageDescription" : @"Flying hornbill",
+//																																	 @"imageName" : @"Hornbill",
+//																																	 @"imageURL" : @"http://www.factzoo.com/sites/all/img/birds/great-hornbill-flying.jpg"
+//																															 }
+//																															 ];
+//		
+//		
+//		return fakeDictArray;
+//}
+
+
+
+
+@end
